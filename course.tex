@@ -1,0 +1,188 @@
+% Created 2012-03-05 Mon 11:04
+\documentclass[11pt,letter]{article}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{graphicx} 
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont{Gentium Basic}
+\setromanfont [BoldFont={Gentium Basic Bold},
+                ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+\setsansfont{Charis SIL}
+\setmonofont[Scale=0.8]{DejaVu Sans Mono}
+\usepackage{geometry}
+\geometry{letterpaper, margin=0.75in}
+\usepackage{hyperref}
+\pagestyle{empty}
+\title{}
+      
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Practical Computing for Biologists}
+\author{Cliburn Chan}
+\date{\today}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs Org-mode version 7.8.02}}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Course description}
+\label{sec-1}
+
+This is five day workshop for biologists (loosely defined to mean anyone who isn't yet a computer wizard) to learn how to use the computer more effectively for scientific work. It is designed for people who \emph{need to work with large and complex data sets and suspect that there is a better and faster way to get their work done}. The course is loosely based on the (recommended and affordable) textbook \emph{Practical Computing for Biologists} by Steven Haddock and Casey Dunn. The course covers 1) Using the Unix command line, 2) regular expressions for text search and manipulation, 3) fundamentals of Python programming, 4) Python tools for biomedical data processing, 5) command line and programmatic image analysis, 6) relational databases and 7) using computers remotely. Participants are expected to use a Mac or Linux (either dedicated, dual-boot, or in emulator) notebook since these provide a Unix command line. No previous Unix or programming experience is necessary.
+\subsection{Day 1}
+\label{sec-1-1}
+\begin{itemize}
+
+\item Installing software\\
+\label{sec-1-1-1}%
+For Linux users, please use your distribution's package manager to install necessary software as needed. Hence, only Mac installations are described.
+\begin{itemize}
+
+\item Text editor
+\label{sec-1-1-1-1}%
+\begin{enumerate}
+\item TextWranger
+\end{enumerate}
+
+\item Python
+\label{sec-1-1-1-2}%
+\begin{enumerate}
+\item Enthought Python Distribution, Academic license
+\end{enumerate}
+
+\item Image analysis
+\label{sec-1-1-1-3}%
+\begin{enumerate}
+\item ImageMagick
+\item ImageJ
+\end{enumerate}
+\end{itemize} % ends low level
+
+\item The Unix shell\\
+\label{sec-1-1-2}%
+Many operations on large file sets, especially for text data, are performed much more efficiently from the command line than from a graphical interface. 
+\begin{enumerate}
+\item Making friends with the command line
+\item Text and web processing
+\item Shell scripting
+\end{enumerate}
+
+\item Text manipulation\\
+\label{sec-1-1-3}%
+A fundamental tool for effective computing is the humble text processor. We will use a text processor to understand the basics of regular expressions, and how to reformat text using regular expressions. The text processor will also be used to develop programs from Day 2.
+\begin{enumerate}
+\item Using a text editor
+\item Basic regular expressions
+\end{enumerate}
+\end{itemize} % ends low level
+\subsection{Day 2}
+\label{sec-1-2}
+\begin{itemize}
+
+\item Programming with Python\\
+\label{sec-1-2-1}%
+Python is a modern programming language that has a large scientific following because of its readability, ease of learning, and wide availability of scientifically-oriented libraries. Day 2 is devoted to learning how to program in Python.
+\begin{enumerate}
+\item Playing with IPython
+\item Running your first Python program
+\item Decisions and loops
+\item Reading, writing and merging files
+\item Modules and libraries
+\item Writing tests and squashing bugs
+\end{enumerate}
+\end{itemize} % ends low level
+\subsection{Day 3}
+\label{sec-1-3}
+\begin{itemize}
+
+\item Python for biologists\\
+\label{sec-1-3-1}%
+Day 3 is for learning the power of Python for numerical calculations, data analysis and generating 2D and 3D graphics. Optimization techniques to speed up Python programs are also shown.
+\begin{enumerate}
+\item Numerics and simulations in Python
+\item 2D and 3D Graphics in Python
+\item Introduction to BioPython
+\item Making programs faster
+\end{enumerate}
+\end{itemize} % ends low level
+\subsection{Day 4}
+\label{sec-1-4}
+\begin{itemize}
+
+\item Relational databases\\
+\label{sec-1-4-1}%
+Databases have many advantages over spreadsheets for complex data sets. We will explore the SQLite database, including basic database design, construction and querying. These skills are easily portable to other more fancy databases such as Oracle and PostgreSQL.c1. Spreadsheets versus databases
+\begin{enumerate}
+\item Introducing SQLite and SQL
+\item Database design
+\item Database queries
+\item SQLite from Python
+\end{enumerate}
+
+\item Advanced shell and Python\\
+\label{sec-1-4-2}%
+Creating automated workflows with shell scripting and Python.
+\begin{enumerate}
+\item More shell commands
+\item Unix pipes
+\item Shell functions
+\end{enumerate}
+\end{itemize} % ends low level
+\subsection{Day 5}
+\label{sec-1-5}
+\begin{itemize}
+
+\item Graphics\\
+\label{sec-1-5-1}%
+An introduction to the use of computing techniques to process and extract quantitative data from image data. 
+\begin{enumerate}
+\item Basics of images
+\item Batch operations on the command line with ImageMagick
+\item Extract quantitative data with ImageJ
+\item Image analysis with Python
+\end{enumerate}
+
+\item Working remotely\\
+\label{sec-1-5-2}%
+How to transfer and synchronize files with remote computers from the command line, or run programs on remote computers using the command line or graphical user interface.
+\begin{enumerate}
+\item Command line connections with ssh
+\item File transfer and synchronization
+\item VNC
+\item High performance computing with remote clusters
+\end{enumerate}
+
+\item Software carpentry for reproducible analysis\\
+\label{sec-1-5-3}%
+Managing large complex data sets is very error-prone. This final session covers tools to help ensure that your research is reproducible, and to minimize the risk of errors.
+\begin{enumerate}
+\item Version control with mercurial
+\item Test-driven programming
+\item Reproducible analysis with Pweave
+\end{enumerate}
+
+
+\end{itemize} % ends low level
+\section{About the instructor}
+\label{sec-2}
+
+Something about why I am qualified (?) to teach this course (apart
+from the fact that nobody else will do it for free).
+\section{Possible future workshops}
+\label{sec-3}
+\subsection{\emph{Practical Statistics for Biologists}}
+\label{sec-3-1}
+\subsection{\emph{Visualizing Data for Biologists}}
+\label{sec-3-2}
+\subsection{\emph{Computer Simulations for Biologists}}
+\label{sec-3-3}
+\subsection{\emph{Mathematical Modeling for Biologists}}
+\label{sec-3-4}
+
+\end{document}

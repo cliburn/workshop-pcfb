@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+	<link rel="STYLESHEET" href="../help.css" charset="ISO-8859-1" type="text/css">
+	<title>TextWrangler Expert Preferences</title>
+	<meta name="generator" content="BBEdit 10">
+</head>
+<body>
+
+<div>
+
+<h3>TextWrangler Expert Preferences</h3>
+
+<p class="Body">
+There are a number of behaviors in TextWrangler for which there are no UI
+controls in the Preferences window; this is typically because the
+settings are so obscure that placing them in the Preferences window
+would just make it complicated. In fact, some of these settings
+<em>were</em> in the Preferences window, and have been removed in order to
+simplify the interface; in such cases, any changes you made previously
+will be honored, even though the UI in the Preferences window is gone.
+</p>
+
+<p class="Note-Text">
+<strong>Note:</strong> Adjusting the settings described here involves
+using the Unix command line in the Terminal. Most changes will not have any
+immediate visible effect, but will instead take effect the next time you
+perform a relevant action, or, at the latest, after quitting and
+restarting TextWrangler.
+</p>
+
+<ul>
+	<li>
+		<p class="Body">
+		TextWrangler supports "camel case" navigation: press
+		Control-left-arrow or Control-right-arrow to jump to the next
+		(or previous) transition from lower-case to upper-case
+		characters (or a word boundary, whichever comes first).
+		</p>
+		
+		<p class="Body">
+		Note that this use of Control-left-arrow and Control-right-arrow
+		replaces the pre-2.2 behavior of using these key combinations to
+		scroll horizontally. If you prefer the old behavior, you can do
+		the following from the command line:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler Editor:ControlArrowCamelCase -bool NO</p>
+		<p class="Code">defaults write com.barebones.textwrangler Editor:ControlArrowHScroll -bool YES</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		if Xcode is running, Open Selection and Open File by Name will
+		ask it for a path to the file name; if something useful comes
+		back, TextWrangler will open it. If for some reason you are using Xcode but
+		don't want TextWrangler to do this, you can turn it off:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler Services:AskXcodeForOpenFileByName -bool NO</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		The settings for translucent drags have been removed from the
+		Application preferences. If you previously changed the setting
+		from its factory default, the change is still honored. If you
+		want to change it, you can do so from the command line:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler Services:TranslucentDrags -bool NO</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		The factory default for QuickTime playback is now off, so
+		TextWrangler 2.2 and later will no longer try to interpret .m3u and
+		.smi files as movies (which was technically possible but not
+		really useful).
+		</p>
+		
+		<p class="Body">
+		If desired, these settings can be changed as follows:
+		</p>
+		
+		<p class="Code"># don't try to open QuickTime image files as images</p>
+		<p class="Code">defaults write com.barebones.textwrangler Services:QuickTimeImages -bool NO</p>
+		
+		<p></p>
+
+		<p class="Code"># try to open QuickTime movies as movies</p>
+		<p class="Code">defaults write com.barebones.textwrangler Services:QuickTimeMovies -bool YES</p>
+			
+		<p></p>
+
+		<p class="Code"># Don't try to interpret PDFs as "movies"; i.e. open them as text files</p>
+		<p class="Code">defaults write com.barebones.textwrangler Services:DontTranslatePDFs -bool NO</p>
+
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		You can control the list display in browser windows, as follows:
+		</p>
+		
+		<p class="Code"># to suppress the display of file icons in disk browsers (and some others)</p>
+		<p class="Code">defaults write com.barebones.textwrangler BrowserWindows:ShowIcons -bool NO</p>
+			
+		<p></p>
+		<p class="Code"># to make Search Results and error results windows open "flat"</p>
+		<p class="Code">defaults write com.barebones.textwrangler BrowserWindows:HierarchicalResults -bool NO</p>
+			
+		<p></p>
+		<p class="Code"># to make hierarchical Search Results and error browser windows open</p>
+		<p class="Code"># with top-level items collapsed</p>
+		<p class="Code">defaults write com.barebones.textwrangler BrowserWindows:NodesExpanded -bool NO</p>
+
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		To suppress the display of file icons in multi-file Find
+		Differences results:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler DifferencesResults:ShowIcons -bool NO</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		By default, TextWrangler will open AppleScript files using whatever application the OS claims is 
+		capable of doing so. If you wish to override this, change the "Services:ScriptEditorBundleID" 
+		preference to the bundle ID of your preferred script editor. For example, to set the script
+		editor to Script Debugger:
+		</p>
+
+		<p class="Code">defaults write com.barebones.textwrangler Services:ScriptEditorBundleID com.latenightsw.ScriptDebugger</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		To control whether TextWrangler warns you when opening a malformed UTF-8 file:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler Filing:WarnMalformedUTF8 -bool YES</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		To control whether TextWrangler hides palettes when arranging windows after
+		a Find Differences operation:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler DifferencesResults:HidePalettes -bool YES</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+				To control whether TextWrangler keeps the differences results and document windows
+				arranged when clicking on an item in a differences window:
+		</p>
+				
+		<p class="Code">defaults write com.barebones.textwrangler DifferencesResults:KeepWindowsArranged -bool YES</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		CVS directories (that is, directories containing CVS
+		administrative data such as root and repository information) are
+		now considered invisible. This affects Find Differences when
+		comparing folders, and the behavior of multi-file search and
+		replace. If for some reason you need the old behavior:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler Misc:CVSDirsAreInvisible -bool NO</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		TextWrangler attempts to move windows as little as possible when you zoom them.
+		To override this and let TextWrangler place the window in the upper left-hand corner
+		of the screen:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler Windows:ZoomInPlace -bool NO</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		To suppress the warning that will occur if the script you're
+		trying to run has non-Unix line breaks (when using the "Run
+		Script" command):
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler "#!ScriptTask:WarnAboutNonUnixLineBreaksBeforeRunning" -bool NO</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		TextWrangler will use Affrus for Perl debugging by default (assuming
+		that you have Affrus installed), but if desired you can turn
+		this off:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler "#!RunScriptPrefs:UseAffrusForPerlDebugging" -bool NO</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		Ordinarily, TextWrangler will only ask you to choose a file's encoding when it
+		can't otherwise figure out what the encoding is, and your "if the file's encoding
+		can't be guessed" preference is a UTF-8 or UTF-16 variant. This should be fine for
+		general use, but if for some reason you <em>always</em> want TextWrangler to ask you
+		when it can't guess a file's encoding, even if your preference would do the job,
+		you can:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler Filing:Filing:AskForUnguessableFileEncoding -bool YES</p>
+		<p></p>
+	</li>
+	<li>
+		<p class="Body">
+		Like many Mac OS X applications, TextWrangler supports the "Find Scrap", a feature of the OS that enables sharing of the "search for" string between applications. Some applications put inappropriate content (such as Web search strings) on the Find Scrap, which can cause the "search for" string in TextWrangler's Find dialog to be replaced when you didn't expect it.
+		</p>
+		
+		<p class="Body">
+		To tell TextWrangler not to import the Find Scrap into its Find dialog, nor to export the "search for" string to the Find Scrap:		
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler FindDialog:UsesFindScrap -bool NO</p>
+		<p></p>
+	</li>
+	
+	<li>
+		<p class="Body">
+		The FTP/SFTP browser no longer presents an alert to confirm bookmark selections that involve changing to a different server or account.
+		</p>
+    
+		<p class="Body">
+        If you preferred the old behavior, there is a preference to restore it:
+   		</p>
+   		
+   		<p class="Code">defaults write com.barebones.textwrangler FTP:ConfirmServerChangesFromBookmark -bool YES</p>
+		<p></p>
+	</li>
+
+	<li>
+		<p class="Body">
+		The "Copy as Styled HTML" and "Save as Styled HTML" commands normally generate style information
+		inline. If you want to use an embedded style sheet instead, set the hidden preference thusly:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler Misc:UseInlineStylesForCopiedHTML -bool NO</p>
+		<p></p>
+	</li>
+
+	<li>
+		<p class="Body">
+			The Function Popup preferences are long gone, but you can control whether or not prototypes appear in the function menu, and whether the function menu sorts by name or not (holding down the Shift key as you open the function menu reverses this on the fly):
+		</p>
+		
+		<ul>
+			<li>
+				<p class="Code">defaults write com.barebones.textwrangler FunctionPopup:Prototypes -bool YES #show function prototypes in the menu</p>
+				<p></p>
+			</li>
+			
+			<li>
+				<p class="Code">defaults write com.barebones.textwrangler FunctionPopup:SortByName -bool YES #sort the menu by name</p>
+				<p></p>
+			</li>
+		</ul>
+	</li>
+		
+	<li>
+		<p class="Body">
+			Beginning with version 2.0, TextWrangler stores document state (window position and various settings) in a central repository in your TextWrangler preferences folder. If you wish, you can ask TextWrangler to store document state in the resource fork of the document's file:
+		</p>
+		
+		<p class="Code">defaults write com.barebones.textwrangler State:UseResourceFork -bool YES</p>
+		<p></p>
+	</li>
+
+	<li>
+		<p class="Body">
+			By default, TextWrangler will avoid writing extended attributes (HFS Type/Creator) to volumes which don't natively support them (i.e. to avoid creating the ._FILE) when it is safe to do so (i.e. we'll be able to re-open the document correctly later.) If desired, you can fine-tune this behavior:
+		</p>
+		
+		<p class="Code">
+			defaults write com.barebones.textwrangler Filing:WriteExtendedAttributes <i>&lt;value&gt;</i>
+		</p>
+		<p></p>
+		<p class="Body">
+			“<i>value</i>” should be one of the following:
+		</p>
+		
+			<ul>
+				<li>
+					<p class="Body">
+						<em>Always</em>: Always write the HFS file type and creator (the pre-2.2 behavior)
+					</p>
+				</li>
+				
+				<li>
+					<p class="Body">
+						<em>Never</em>: Never set the HFS file type and creator (even if the document’s volume supports it).
+					</p>
+				</li>
+				
+				<li>
+					<p class="Body">
+						<em>Smart</em>: Write HFS file type and creator only if the document’s volume supports it
+					</p>				
+				</li>
+			</ul>
+		
+		
+	</li>
+</ul>
+</div>
+</body>
+</html>

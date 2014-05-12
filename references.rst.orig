@@ -1,0 +1,79 @@
+References
+==========
+
+The website for the textbook `Practical Computing for Biologists`_.
+
+.. index::
+   single: references
+
+Unix
+----
+
+* `Unix Cheat Sheet`_
+
+Regular expressions
+-------------------
+
+* `Regular Expression Cheat Sheet`_
+
+Python
+------
+
+Online tutorials
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Learn Python the Hard Way`_: If you have found the learning curve for our exercises to be too steep, try the 52 exercises at this site, which provide a much more gentle ramp. The author shares our philosophy that the only way to effectively learn programming is by working on programming exercises. Don't be put off by the title - the exercises are not as "hard" as the ones in the workshop - by "the hard way" the author just means learning by *doing* instead of learning by *reading*.
+
+`Think Python - How to Think Like a Computer Scientist`_: Once you are comfortable with the basic syntax of Python (e.g. from the book above), this book introduces you gently to the conceptual ideas you willl need to program effectively..
+
+PyPi - A repository of software for the Python programming language
+------------------------------------------------------------
+* pypi_
+
+Useful packages for scientific computing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Python_
+* Numpy_
+* Scipy_
+* Matplotlib_
+* Sphinx_
+
+Relational Databases
+--------------------
+
+* SQLite_
+* `SQLite tutorial`_
+
+Inkscape Tutorials
+------------------
+
+Software used
+-------------
+
+* TextWrangler_
+* `EPD Academic Version`_
+* MySQL_
+* ImageMagick_
+* ImageJ_
+
+.. _TextWrangler: http://www.barebones.com/products/textwrangler/
+.. _Python: http://www.python.org/
+.. _EPD: http://www.enthought.com/
+.. _EPD Academic Version: http://enthought.com/products/edudownload.php
+.. _Numpy: http://numpy.scipy.org/
+.. _Scipy: http://www.scipy.org/
+.. _Matplotlib: http://matplotlib.sourceforge.net/
+.. _MySQL: http://www.mysql.com/
+.. _Sphinx: http://sphinx.pocoo.org/
+..  _Inkscape: http://inkscape.org/
+.. _ImageMagick: http://www.imagemagick.org/script/index.php
+.. _ImageJ: http://rsbweb.nih.gov/ij/
+..  _Practical Computing for Biologists: http://practicalcomputing.org/
+.. _SQLite: http://sqlite.org
+.. _SQLite tutorial: http://zetcode.com/databases/sqlitetutorial/
+.. _Regular Expression Cheat Sheet: http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/
+.. _Think Python - How to Think Like a Computer Scientist: http://www.greenteapress.com/thinkpython/html/index.html
+.. _Unix Cheat Sheet: http://files.fosswire.com/2007/08/fwunixref.pdf
+.. _pypi: http://pypi.python.org
+.. _Learn Python the Hard Way: http://learnpythonthehardway.org/book/

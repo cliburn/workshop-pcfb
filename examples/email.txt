@@ -1,0 +1,15 @@
+4th Quarter Revenue by Sales Rep
+Bare Bones Software - New England Region
+
+                            Oct     Nov     Dec
+Rich Siegel                 4.3     3.1     6.1
+Patrick Woolsey             2.1     2.2     3.1
+Adam Selene                 1.7     1.9     1.5
+Steve Kalkwarf              1.0     0.9     1.5
+Bill Gates (*)             -1.0    -1.5    -2.0
+
+(all numbers in billions of dollars)
+
+(*: one of these things is not like the other, one of these 
+things just doesn't belong... :-)
+

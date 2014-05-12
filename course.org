@@ -1,0 +1,81 @@
+#+LaTeX_CLASS: cc-org-article
+#+TITLE: Practical Computing for Biologists
+#+options: toc:nil h:2 num:3
+
+* Course description
+This is five day workshop for biologists (loosely defined to mean anyone who isn't yet a computer wizard) to learn how to use the computer more effectively for scientific work. It is designed for people who /need to work with large and complex data sets and suspect that there is a better and faster way to get their work done/. The course is loosely based on the (recommended and affordable) textbook /Practical Computing for Biologists/ by Steven Haddock and Casey Dunn. The course covers 1) Using the Unix command line, 2) regular expressions for text search and manipulation, 3) fundamentals of Python programming, 4) Python tools for biomedical data processing, 5) command line and programmatic image analysis, 6) relational databases and 7) using computers remotely. Participants are expected to use a Mac or Linux (either dedicated, dual-boot, or in emulator) notebook since these provide a Unix command line. No previous Unix or programming experience is necessary.
+** Day 1
+*** Installing software and working with text editors (AM)
+**** Software installation 
+For Linux users, please use your distribution's package manager to install necessary software as needed. Hence, only Mac installations are described.
+***** Text editor
+1. TextWranger
+***** Python
+1. Enthought Python Distribution, Academic license
+***** Image analysis
+1. ImageMagick
+2. ImageJ
+
+**** Text processing
+A fundamental tool for effective computing is the humble text processor. We will use a text processor to understand the basics of regular expressions, and how to reformat text using regular expressions. The text processor will also be used to develop programs from Day 2.
+1. Using a text editor
+2. Basic regular expressions
+
+**** The Unix shell (PM)
+Many operations on large file sets, especially for text data, are performed much more efficiently from the command line than from a graphical interface. 
+1. Making friends with the command line
+2. Text and web processing
+3. Shell scripting
+**** Working remotely (PM)
+How to transfer and synchronize files with remote computers from the command line, or run programs on remote computers using the command line or graphical user interface.
+1. Command line connections with ssh
+2. File transfer and synchronization
+3. VNC
+4. High performance computing with remote clusters
+** Day 2
+*** Programming with Python
+Python is a modern programming language that has a large scientific following because of its readability, ease of learning, and wide availability of scientifically-oriented libraries. Day 2 is devoted to learning how to program in Python.
+1. Playing with IPython
+2. Running your first Python program
+3. Decisions and loops
+4. Reading, writing and merging files
+5. Modules and libraries
+6. Writing tests and squashing bug
+** Day 3
+*** Python for biologists
+Day 3 is for learning the power of Python for numerical calculations, data analysis and generating 2D and 3D graphics. Optimization techniques to speed up Python programs are also shown.
+1. Numerics and simulations in Python
+2. 2D and 3D Graphics in Python
+3. Introduction to BioPython
+4. Making programs faster
+** Day 4
+*** Relational databases (AM)
+Databases have many advantages over spreadsheets for complex data sets. We will explore the SQLite database, including basic database design, construction and querying. These skills are easily portable to other more fancy databases such as Oracle and PostgreSQL.c1. Spreadsheets versus databases
+1. Introducing SQLite and SQL
+2. Database design
+3. Database queries
+4. SQLite from 
+*** Graphics (PM)
+An introduction to the use of computing techniques to process and extract quantitative data from image data. 
+1. Basics of images
+2. Batch operations on the command line with ImageMagick
+3. Extract quantitative data with ImageJ
+4. Image analysis with Python
+# *** Software carpentry for reproducible analysis
+# Managing large complex data sets is very error-prone. This final session covers tools to help ensure that your research is reproducible, and to minimize the risk of errors.
+# 1. Version control with mercurial
+# 2. Test-driven programming
+# 3. Reproducible analysis with Pweave
+
+# LocalWords:  Pweave Cygwin TextWranger Enthought ffmpeg ImageMagick
+
+* About the instructor
+Something about why I am qualified (?) to teach this course (apart
+from the fact that nobody else will do it for free).
+
+* Possible future workshops
+** /Practical Statistics for Biologists/
+** /Visualizing Data for Biologists/
+** /Computer Simulations for Biologists/
+** /Mathematical Modeling for Biologists/
+# LocalWords:  PostgreSQL

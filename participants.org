@@ -1,0 +1,18 @@
+* CFAR members
+** Tomaras lab
+Kelly Seaton <kelly.seaton@duke.edu>
+Jessica Peel <jessica.peel@duke.edu>
+** Weinhold lab
+John Yi <john.yi@dm.duke.edu>
+Derrick Pulliam <derrick.pulliam@duke.edu>
+** Luftig lab
+Alex Price <alexander.price@duke.edu>
+** Ferrari lab
+Guido Ferrari <gflmp@duke.edu>
+** Sandeep lab
+Sandeep Dave <ssd9@duke.edu>
+** Tobin lab
+Joe Saelens <jsaelens71@gmail.com>
+** Kelsoe lab
+Anna Maria Masci <annamaria.masci@duke.edu>
+* Non-CFAR
